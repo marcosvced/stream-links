@@ -4,6 +4,9 @@
   functions = "netlify/functions"
   publish = "dist"
 
+[context.production]
+  enviroment = { SUPABASE_URL='https://zbbhofiztgjazihdxaol.supabase.co',  SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpiYmhvZml6dGdqYXppaGR4YW9sIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4NTUwMTYsImV4cCI6MjAxMjQzMTAxNn0.F9Ho-H6bCzBX_GS2yQQB8dmAh-ZtahHEbWlRpi-lNVs',  BASE_URL='https://stream-links.netlify.app' }
+
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   #[[redirects]]
