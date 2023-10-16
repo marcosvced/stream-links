@@ -7,6 +7,7 @@
     width: var(--icon-size);
     height: var(--icon-size);
 }
+/*
 
 .a-icon.-feather {
     --icon-url: url('../public/icons/feather.svg');
@@ -39,3 +40,4 @@
 .a-icon.-smile {
     --icon-url: url('../../../public/icons/smile.png');
 }
+*/
