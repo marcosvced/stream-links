@@ -7,6 +7,13 @@ export default defineNuxtConfig({
     'assets/styles/index.css',
   ],
   modules: ['@nuxtjs/supabase'],
+  supabase: {
+    cookieOptions: {
+      maxAge: 360000,
+      sameSite: 'lax',
+      secure: true,
+    },
+  },
   runtimeConfig: {
     public: {
       SUPABASE_URL: process.env.SUPABASE_URL,
