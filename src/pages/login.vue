@@ -5,7 +5,6 @@ const { BASE_URL } = useRuntimeConfig().public
 const supabase = useSupabaseClient()
 const email = ref('')
 
-console.log(BASE_URL)
 const signInWithOtp = async () => {
   const { error } = await supabase.auth.signInWithOtp({
     email: email.value,
@@ -15,7 +14,10 @@ const signInWithOtp = async () => {
   })
   if (error) {
     console.log(error)
+    alert('Produceuse un erro ó intentar iniciar sesión')
+    return
   }
+  alert(`Enviouse un email ó correo ${email.value} para iniciar sesión`)
 }
 </script>
 <template>
@@ -25,7 +27,7 @@ const signInWithOtp = async () => {
         Login
       </h1>
       <div class='login__wrapper'>
-        <a-input :value='email' type='email' @update:value='email=$event' />
+        <a-input :value='email' type='email' @keyup.enter='signInWithOtp' @update:value='email=$event' />
 
         <button class='a-button -btn-link' @click='signInWithOtp'>
           Iniciar sesión
