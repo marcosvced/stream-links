@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     'assets/styles/aguia/aguia.min.css',
     'assets/styles/index.css',
   ],
-  modules: ['@nuxtjs/supabase'],
   supabase: {
     cookieOptions: {
       maxAge: 360000,
@@ -14,11 +13,11 @@ export default defineNuxtConfig({
       secure: true,
     },
   },
-  runtimeConfig: {
-    public: {
-      SUPABASE_URL: process.env.SUPABASE_URL,
-      SUPABASE_KEY: process.env.SUPABASE_KEY,
-      BASE_URL: process.env.BASE_URL,
-    },
-  },
+  // runtimeConfig: {
+  //   public: {
+  //     SUPABASE_URL: process.env.SUPABASE_URL,
+  //     SUPABASE_KEY: process.env.SUPABASE_KEY,
+  //     BASE_URL: process.env.BASE_URL,
+  //   },
+  // },
 })
